@@ -9,7 +9,7 @@ import sys
 # 接続する 
 conn =  mysql.connector.connect(
     host="localhost",
-    database="test_database",
+    database="toto",
     user="root",
     password="root"
 )
@@ -18,7 +18,7 @@ print("connection: "+str(conn.is_connected()))
 # カーソルを取得する
 cur = conn.cursor()
 
-sql = "select id, name from test_table"
+sql = "select team_id, team from team"
 cur.execute(sql)
 
 # 実行結果を取得する
